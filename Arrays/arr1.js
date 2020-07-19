@@ -1,3 +1,5 @@
+// Arrays = conjunto de dados acessado por um indice
+
 let frutas = ['laranja', 'abacate', 'melancia']
 console.log(frutas)
     /* [ 'laranja', 'abacate', 'melancia'] */

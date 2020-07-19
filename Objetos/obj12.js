@@ -20,7 +20,10 @@ console.log(Object.keys(filha1), Object.keys(filha2))
     /* [ 'nome' ] [ 'nome' ] */
 
 for (let key in filha2) {
-    console.log(key)
+    //console.log(key)
     /*  nome
         corCabelo */
+    filha2.hasOwnProperty(key) ? 
+        console.log(key) : console.log(`Por herança: ${key}`)
+        /* Por herança: corCabelo */
 }   
