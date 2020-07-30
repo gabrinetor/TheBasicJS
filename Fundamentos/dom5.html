@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM com BOM</title>
+</head>
+
+<body>
+
+    <div id="msg">
+        
+    </div>
+
+    <!-- <input type="button" value="Avançar" onclick="window.history.forward()">
+    <input type="button" value="Voltar" onclick="window.history.back()"> -->
+
+    <input type="button" value="Cancelar TimeOut" onclick="clearTimeout(msg)"> <!-- clearTimeout aborta a missão do set setTimeout e tem um objeto identificador como paramentro -->
+    <input type="button" value="Cancelar Intervalo" onclick="clearInterval(msg)"> <!-- mesma coisa para o interval -->
+    <input type="button" value="Voltar" onclick="">
+
+    <script>
+        //console.log(document) //todo o conteúdo da página
+        //console.log(window) //tudo a mais o que está acima de document
+        //console.log(window.location.href)   //retorna a url do documento, bastante util quando vc quer direcionar o usuario para uma pagina e trazer ele de volta depois que ele executar uma determinada ação. 
+        //window.history.back() //voltar o historico
+        //window.history.forward() //avançar o historico 
+        //window.localStorage.setItem('nome', 'Gabriela') //guardar algo no browser do user (chave, item) - fica no cache
+        //window.sessionStorage.setItem('nome2', 'Maria') //salva na sessão, limpa e cria a cada sessão
+        //document.getElementById('msg').innerHTML = window.sessionStorage.getItem('nome2')
+        //window.open('https://twitter.com/gbnetor', 'meu_twitter', 'width=500, height=400') //abrir uma janela (URL, nome_da_janela, parametros_adicionais(ex.: larg. e alt.)), os navegadores bloqueiam os popups
+        //let popup = window.open('', '', 'width=500, height=400, padding=400 400') 
+        //popup.document.write('Texto para o popup')
+        //popup.opener.document.write('Texto para o popup principal')
+        //SetTimeout define uma função que vai ser executada uma unica vez, depois de um determinado período de tempo
+        //setTimeout( () => {console.log('Mensagem por timeout')}, 2000)  //setTimeout(função , qts ms o browser vai aguardar ate fazer aquela ação) -> dps de 2 segundos apresentou no consolee do browser
+        
+        //let msg = setTimeout(mensagemTimeout, 5000)  //setTimeout também pode ser executado, chamando uma função externa
+        // function mensagemTimeout() { console.log('Mensagem via timeout!') } //se clicar em cancelar vai cancelar esse evento
+
+        // let msg = setInterval(mensagemInterval, 1000)  //a cada quanto tempo eu quero chamar
+        // function mensagemInterval() { console.log('Mensagem via timeout!') } //a cada segundo ta incrementando nosso contador
+
+        // let msg = setTimeout(mensagemTimeout, 6000)  //
+        // function mensagemTimeout() { document.getElementById('msg').innerHTML = 'Obigado por visitar a página' }
+        // function mensagemInterval() { console.log('Mensagem via timeout!') }
+    
+        //verificar se usuário esta na sua página
+        let intervalo = setInterval(verificaFoco, 200)  //verifica aa cada 2 vezes por segundo se o usuario esta na minha pagina ou nao. 
+        let contador = 0
+        function verificaFoco() { 
+            if(document.hasFocus()){    //se estiver na pagina, incrementa um contador
+                contador++
+                console.log(contador)
+                if(contador >= 10) { //qnd chegar em um valor, vai mostrar a mensagem
+                    mensagemTimeout() 
+                    clearInterval(intervalo) //chama o setInterval
+                } 
+            }
+         }
+        function mensagemTimeout() { document.getElementById('msg').innerHTML = 'Obigado por visitar a página' }
+    </script>
+
+</body>
+</html>

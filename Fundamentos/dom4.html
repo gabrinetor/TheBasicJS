@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM com BOM</title>
+    <style>
+        .zebrada{background: silver;}
+    </style>
+</head>
+<body>
+    <table class="zebra">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>Ana</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Pedro</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Vitoria</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Roberta</th>
+            </tr>
+        </tbody>
+    </table>
+    <a href="https://www.youtube.com/watch?v=zAPDX_IkNds&list=PLv_e7t4MYysipu4VC7J54r1JF9eFoqP6-&index=3">Fonte</a>
+
+    <script>
+        window.onload = function(){
+            let zebrar = window.document.querySelectorAll('.zebra tbody tr')
+            for (let i=0; i<zebrar.length; i+=2) {  //+2 porque vai pular a linha
+                zebrar[i].className = 'zebrada'
+            }
+        }
+    </script>
+</body>
+</html>

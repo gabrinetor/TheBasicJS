@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="demo" onmouseover="funcao1(this)" onmouseout="funcao2(this)">Passe o mouse aqui</h1>
+    <!-- <input type="text" id="demo" onchange="funcao()"> -->
+    <!--onchange = mudança no formulario-->
+    <!-- <select name="" id="demo" onchange="funcao()">
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+    </select> -->
+
+    <script>
+        // function funcao(){
+        //     alert('Opção alterada')
+        // }
+        // document.getElementById('demo').onclick = funcao
+        function funcao1(elemento){
+            elemento.innerHTML = 'Ok, mouse sobre o elemento'
+        }
+        function funcao2(elemento){
+            elemento.innerHTML = 'Passe o mouse aqui 🖱'
+        }
+        /* 
+        onclick / onload / onchange / onmouseover / onmouseout / 
+        onfocus / onmousedown / onmouseup
+        */
+    </script>
+</body>
+</html>

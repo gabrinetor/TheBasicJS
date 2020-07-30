@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p class="exemplo"></p>
+    <p class="exemplo"></p>
+    <p class="exemplo">Veja o vídeo 😃: https://www.youtube.com/watch?v=mchmZKNBjLA&list=PLv_e7t4MYysipu4VC7J54r1JF9eFoqP6-&index=2</p>
+    <div class="exemplo"></div>
+    <script>
+        //document.getElementById('demo').innerHTML = 'Texto: inner é interno, é a propriedade do elemento pego pelo id demo (que queremos alterar ou buscar a informação.' 
+        //console.log(document.getElementsByTagName('p'))
+        //console.log(document.getElementsByClassName('exemplo'))
+        // let x = document.getElementsByClassName('exemplo')
+        // x[0].innerHTML = 'Texto 0'
+        // x[1].innerHTML = 'Texto 1'
+        // x[2].innerHTML = 'Texto 2'
+        let x = document.querySelectorAll('p.exemplo') //todos os paragrafos que tenham exemplo
+        console.log(x)
+        /* document.baseURI / document.body / document.doctype / document.documentURI / document.domain / document.head / 
+            document.inputEncoding / document.lastModified / document.title / document.URL / 
+            document.forms / document.links / document.images / document.scripts */
+    </script>
+</body>
+</html>

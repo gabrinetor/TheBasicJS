@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body onload="lafuncione()">
+    <!-- onload executar ação depois que a página for carregada -->
+    <!-- <h1 onclick="this.innerHTML = 'Obrigado!'">Clique aqui</h1> -->
+    <!-- <h1 onclick="afuncao(this)">E clique aqui também! ☝🏾</h1> -->
+    <h1 id="demo">Clique aqui! ☝🏾</h1>
+    <!-- <img id="imagem" src="imagem.jpg" alt="Texto qualquer"> -->
+    <!-- <p id="demo">Isso é um teste</p> -->
+    <script>
+        //document.write('Isso é um teste')
+        //document.getElementById('imagem').src = 'foto.jpg' //trocar atributos
+        //document.getElementById('imagem').alt = 'Texto 2'
+        //document.getElementById('demo').style.color = 'blue'
+        // function afuncao(element){
+        //     element.innerHTML = 'Obrigado 🍷'
+        // }
+        function maisumafuncao(){
+            document.getElementById('demo').innerHTML = 'Obrigado 🍷'
+        }
+        document.getElementById('demo').onclick = maisumafuncao
+        function lafuncione(){
+            alert('A página foi carregada')
+        }
+    </script>
+</body>
+</html>
